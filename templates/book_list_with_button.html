@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List with Button</title>
+</head>
+<body>
+    <h1>Book List</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }} ({{ book.year }})</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Button to navigate back to the home page -->
+    <a href="{{ url_for('index') }}">
+        <button>Back to Home</button>
+    </a>
+</body>
+</html>
